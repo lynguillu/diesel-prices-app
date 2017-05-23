@@ -1,13 +1,49 @@
-<h2>Fuel</h2>
+<h2>  Weekly Retail Gasoline and Diesel Prices
+  <h5>(Dollars per Gallon, Including Taxes)</h5>
+  <td><%= @name %></td>
+<p>Date Updated <td><%= @updated %></td></p>
 
-
-
-
+<!-- 
 <p>Geography: <%= @geography %></p>
 <p><%= @name %></p>
 <p>Units: <%= @units %></p>
-
+<p>Updated: <%= @updated %></p>
 <% @series_data.take(6).each do |data| %>
   <p>Date: <%= data[0] %></p>
   <p>Price <%= data[1] %></p>
- <% end %>
+ <% end %> -->
+
+
+<div class="content table-responsive table-full-width">
+
+
+      <table class="table table-striped" style="margin-left: 2%;
+        width: 130%;">
+        <thead>
+            <th>Geography</th>
+            <th>Units</th>
+            <th>Date Updated</th>
+            <th>Week</th>
+            <th>Price</th>
+        </thead>
+        <tbody>
+           <td><%= @geography %></td>
+          
+            <td><%= @units %></td>
+            
+
+        <% @series_data.take(6).each do |data| %>
+            <tr>
+                <!-- <td><%= @geography %></td> -->
+                <td><%= @name %></td>
+                <td><%= @units %></td>
+                <td><%= @updated %></td>
+                <td><%= data[0] %></td>
+                <td><%= data[1] %></td>
+                
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+ </div>
