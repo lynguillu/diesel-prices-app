@@ -1,11 +1,13 @@
 <h2>Fuel</h2>
 
 
-<h3>Prices</h3>
-
-<% @price.take(10).each do |price| %>
-  <p><%= price %></p>
-<% end %>
 
 
+<p>Geography: <%= @geography %></p>
+<p><%= @name %></p>
+<p>Units: <%= @units %></p>
 
+<% @series_data.take(6).each do |data| %>
+  <p>Date: <%= data[0] %></p>
+  <p>Price <%= data[1] %></p>
+ <% end %>
